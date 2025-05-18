@@ -86,7 +86,7 @@
     }
 
     @media print {
-      .pdf-button, .profile-pic {
+      .pdf-button {
         display: none;
       }
       body {
@@ -97,6 +97,17 @@
         box-shadow: none;
         margin: 0;
         padding: 0;
+      }
+      /* Add print-specific style for profile picture */
+      .profile-pic {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 3px solid #4b91f1;
+        box-shadow: none; /* shadows often don't print well */
       }
     }
   </style>
