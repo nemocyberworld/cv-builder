@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Saide Hossain | VAPT Services</title>
+  <title>Saide Hossain | Offensive Security CV</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
     body {
@@ -21,6 +21,17 @@
       border-radius: 12px;
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
       position: relative;
+    }
+    .profile-pic {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #4b91f1;
+      box-shadow: 0 0 10px rgba(75, 145, 241, 0.4);
     }
     h1 {
       font-size: 2.2rem;
@@ -43,7 +54,8 @@
       padding-left: 1.5rem;
       margin-top: 0.5rem;
     }
-    .contact p {
+    .contact p,
+    .lang-skills p {
       margin: 0.3rem 0;
     }
     .link {
@@ -87,59 +99,111 @@
         margin: 0;
         padding: 0;
       }
+      .profile-pic {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 3px solid #4b91f1;
+        box-shadow: none;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
     <button class="pdf-button" onclick="window.print()">Download as PDF</button>
-    <h1>Penetration Testing & VAPT Services</h1>
+    <img src="saide.jpeg" alt="Saide Hossain" class="profile-pic" />
+
+    <h1>Saide Hossain</h1>
+
     <section class="contact">
-      <p><strong>Provider:</strong> Saide Hossain</p>
-      <p><strong>Location:</strong> Panchagarh Sadar, Panchagarh, Bangladesh</p>
+      <p><strong>Address:</strong> Panchagarh Sadar, Panchagarh, Bangladesh</p>
       <p><strong>Phone:</strong> +8801742271463</p>
       <p><strong>Email:</strong> <a class="link" href="mailto:saide65438@gmail.com">saide65438@gmail.com</a></p>
       <p><strong>Website:</strong> <a class="link" href="https://nemocyberworld.github.io" target="_blank">nemocyberworld.github.io</a></p>
+      <p><strong>GitHub:</strong> <a class="link" href="https://github.com/nemocyberworld" target="_blank">github.com/nemocyberworld</a></p>
     </section>
 
     <section>
-      <h2>Services Offered</h2>
+      <h2>Professional Summary</h2>
+      <p>
+        Offensive Security Researcher and Exploit Developer specializing in vulnerability discovery, exploit creation, and advanced reverse engineering. Experienced in analyzing complex binaries, crafting reliable exploits for Linux and Windows environments, and researching cutting-edge security flaws. Passionate about bridging the gap between vulnerability research and practical offensive security operations, with strong skills in low-level systems, binary analysis, and security automation.
+      </p>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+      <p><strong>Freelance Bug Bounty Hunter</strong><br />Ongoing</p>
       <ul>
-        <li><strong>Web Application Pentesting</strong><br />OWASP Top 10, business logic flaws, manual & automated testing using Burp Suite</li>
-        <li><strong>Network Pentesting</strong><br />Internal & external testing, service enumeration, privilege escalation, post-exploitation</li>
-        <li><strong>API Security Testing</strong><br />REST/GraphQL testing, IDOR, auth flaws, token analysis, rate limit bypass</li>
-        <li><strong>Mobile Application Testing</strong><br />Android APK reversing, Frida dynamic testing, MITM interception</li>
-        <li><strong>Cloud & Container Security</strong><br />AWS misconfigurations, exposed credentials, Docker breakouts, CI/CD audits</li>
-        <li><strong>Wireless & IoT Security</strong><br />WiFi WPA/WPA2 cracking, rogue APs, IoT firmware reverse engineering</li>
-        <li><strong>Reporting & Remediation</strong><br />Executive + technical reports with PoC, CVSS scores, and fix recommendations</li>
+        <li>Reported vulnerabilities through platforms like HackerOne and Bugcrowd</li>
+        <li>Focused on high-impact bugs such as IDOR, SSRF, and logic flaws</li>
+        <li>Utilized recon, automation, and fuzzing tools to uncover security issues</li>
+      </ul>
+
+      <p><strong>Exploit Developer (Independent Researcher)</strong><br />Ongoing</p>
+      <ul>
+        <li>Created PoCs for stack/heap overflows, ROP chains, shellcode execution</li>
+        <li>Studied real CVEs and recreated exploits on vulnerable environments</li>
+        <li>Worked with Ghidra, IDA, pwntools, GDB, and x64dbg for binary analysis</li>
+      </ul>
+
+      <p><strong>Mentor — H4K2LIV3 Academy</strong><br />February 2025 – Present</p>
+      <ul>
+        <li>Taught ethical hacking, Linux fundamentals, and red teaming techniques</li>
+        <li>Developed and hosted CTF challenges for hands-on learning</li>
       </ul>
     </section>
 
     <section>
-      <h2>Why Choose Me?</h2>
+      <h2>Education</h2>
+      <p><strong>BSc (Hons)</strong> — Major in Physics</p>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
       <ul>
-        <li>Real-world exploit focus — beyond scanner reports</li>
-        <li>Deep binary & logic flaw analysis</li>
-        <li>Experience with fuzzing, AV/EDR evasion, and mitigation bypass</li>
-        <li>Tailored testing with proof-of-concepts and automation</li>
+        <li><strong>Core Expertise:</strong> Offensive Security Research, Exploit Development, Reverse Engineering, Vulnerability Research</li>
+        <li><strong>Programming Languages:</strong> C, C++, Assembly (x86/x64), Python, Bash, PowerShell</li>
+        <li><strong>Reverse Engineering Tools:</strong> Ghidra, IDA Pro, Binary Ninja, Radare2, GDB, WinDbg, x64dbg, Frida</li>
+        <li><strong>Exploit Techniques:</strong> Stack & Heap Overflows, ROP Chains, Shellcode Injection, Format String, Use-After-Free</li>
+        <li><strong>Security Testing:</strong> Penetration Testing, Bug Hunting, Fuzzing (AFL++, libFuzzer), Crypto Analysis</li>
+        <li><strong>Platforms & OS:</strong> Linux (Kali, BlackArch), Windows</li>
+        <li><strong>Tools:</strong> Metasploit, Burp Suite, Nmap, Wireshark, pwntools, Docker</li>
+        <li><strong>Mitigation Bypass:</strong> ASLR, DEP/NX, Stack Canaries, PIE, CFG/EAF, AV/EDR Evasion</li>
       </ul>
     </section>
 
     <section>
-      <h2>Tools Used</h2>
-      <p>Burp Suite, Metasploit, Nmap, Wireshark, Ghidra, GDB, x64dbg, pwntools, ffuf, Amass, Frida, custom scripts</p>
+      <h2>Hands-on Experience</h2>
+      <ul>
+        <li>TryHackMe — Completed 100+ rooms</li>
+        <li>VulnHub — Rooted boxes like MrRobot, Kioptrix</li>
+        <li>CTF — Active competitor in pwn, reversing, and web challenges</li>
+        <li>Bug Bounty — Disclosed vulnerabilities on major platforms</li>
+      </ul>
     </section>
 
     <section>
-      <h2>Certifications & Training</h2>
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>Mr Linux:</strong> Linux and bash scripting learning project</li>
+        <li><strong>Assembly Tutor:</strong> Assembly x86(64) learning project</li>
+        <li><strong>Learn RSA Interactively:</strong> RSA encryption and decryption teaching project</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Certifications</h2>
       <ul>
         <li>eJPT (In Progress)</li>
         <li>OSCP (Target: August 2025)</li>
-        <li>Mentor at H4K2LIV3 Academy — Red Team & CTF training</li>
       </ul>
     </section>
 
-    <section>
+    <section class="lang-skills">
       <h2>Languages</h2>
       <p><strong>Bangla:</strong> Native</p>
       <p><strong>English:</strong> Professional working proficiency</p>
