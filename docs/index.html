@@ -6,20 +6,29 @@
   <title>Saide Hossain | Offensive Security CV</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
+    :root {
+      --primary: #3461f1;
+      --primary-dark: #2547b7;
+      --ink: #2a2a2a;
+      --paper: #ffffff;
+      --bg: #f4f8fb;
+      --muted: #5b6577;
+    }
+    * { box-sizing: border-box; }
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
       padding: 0;
-      background: #f4f8fb;
-      color: #2a2a2a;
+      background: var(--bg);
+      color: var(--ink);
     }
     .container {
       max-width: 900px;
       margin: 2rem auto;
       padding: 2rem;
-      background: #ffffff;
+      background: var(--paper);
       border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
       position: relative;
     }
     .profile-pic {
@@ -31,84 +40,62 @@
       border-radius: 50%;
       object-fit: cover;
       border: 3px solid #4b91f1;
-      box-shadow: 0 0 10px rgba(75, 145, 241, 0.4);
+      box-shadow: 0 0 10px rgba(75, 145, 241, 0.3);
     }
     h1 {
       font-size: 2.2rem;
-      color: #3461f1;
-      border-bottom: 2px solid #e0e0e0;
+      color: var(--primary);
+      border-bottom: 2px solid #e9eef8;
       padding-bottom: 0.5rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
     }
     h2 {
       color: #2556c2;
-      margin-bottom: 0.5rem;
-      border-left: 4px solid #4b91f1;
+      margin: 1.2rem 0 0.4rem;
+      border-left: 4px solid var(--primary);
       padding-left: 10px;
+      font-size: 1.15rem;
     }
-    section {
-      margin-bottom: 2rem;
-    }
-    ul {
-      list-style-type: disc;
-      padding-left: 1.5rem;
-      margin-top: 0.5rem;
-    }
-    .contact p,
-    .lang-skills p {
-      margin: 0.3rem 0;
-    }
-    .link {
-      color: #1c5dff;
-      text-decoration: none;
-    }
-    .link:hover {
-      text-decoration: underline;
-    }
-    strong {
-      color: #111;
-    }
-    p,
-    li {
-      line-height: 1.6;
-    }
+    section { margin-bottom: 1.2rem; }
+    ul { list-style-type: disc; padding-left: 1.2rem; margin: 0.3rem 0 0; }
+    .contact p, .lang-skills p { margin: 0.25rem 0; }
+    .link { color: #1c5dff; text-decoration: none; }
+    .link:hover { text-decoration: underline; }
+    strong { color: #111; }
+    p, li { line-height: 1.6; }
+    .muted { color: var(--muted); }
+    .row { display: flex; gap: 2rem; flex-wrap: wrap; }
+    .col { flex: 1 1 300px; }
+    .tagline { margin-top: -0.5rem; color: var(--muted); }
+    .bullets-tight li { margin-bottom: 0.3rem; }
     .pdf-button {
       display: inline-block;
       margin-bottom: 1rem;
-      padding: 0.5rem 1rem;
-      background-color: #3461f1;
+      padding: 0.55rem 1rem;
+      background-color: var(--primary);
       color: white;
       border: none;
-      border-radius: 6px;
-      font-size: 1rem;
+      border-radius: 8px;
+      font-size: 0.95rem;
       cursor: pointer;
     }
-    .pdf-button:hover {
-      background-color: #2547b7;
+    .pdf-button:hover { background-color: var(--primary-dark); }
+    @media (max-width: 600px) {
+      .profile-pic { width: 80px; height: 80px; top: 16px; right: 16px; }
+      .container { margin: 0.75rem; padding: 1.25rem; }
+      h1 { font-size: 1.8rem; }
+      .row { gap: 1rem; }
     }
     @media print {
-      .pdf-button {
-        display: none;
-      }
-      body {
-        background: white;
-        margin: 0;
-      }
-      .container {
-        box-shadow: none;
-        margin: 0;
-        padding: 0;
-      }
+      .pdf-button { display: none; }
+      body { background: white; margin: 0; }
+      .container { box-shadow: none; margin: 0; padding: 0; }
       .profile-pic {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        border: 3px solid #4b91f1;
-        box-shadow: none;
+        position: absolute; top: 20px; right: 20px;
+        width: 100px; height: 100px; border-radius: 50%;
+        border: 3px solid #4b91f1; box-shadow: none;
       }
+      a.link { color: black; text-decoration: none; }
     }
   </style>
 </head>
@@ -118,88 +105,110 @@
     <img src="saide.jpeg" alt="Saide Hossain" class="profile-pic" />
 
     <h1>Saide Hossain</h1>
+    <p class="tagline"><strong>Offensive Security Specialist</strong> — Red Teaming • Exploit Development • OSINT • Pentesting</p>
 
     <section class="contact">
-      <p><strong>Address:</strong> Panchagarh Sadar, Panchagarh, Bangladesh</p>
-      <p><strong>Phone:</strong> +8801742271463</p>
-      <p><strong>Email:</strong> <a class="link" href="mailto:saide65438@gmail.com">saide65438@gmail.com</a></p>
-      <p><strong>Website:</strong> <a class="link" href="https://nemocyberworld.github.io" target="_blank">nemocyberworld.github.io</a></p>
-      <p><strong>GitHub:</strong> <a class="link" href="https://github.com/nemocyberworld" target="_blank">github.com/nemocyberworld</a></p>
+      <div class="row">
+        <div class="col">
+          <p><strong>Address:</strong> Panchagarh Sadar, Panchagarh, Bangladesh</p>
+          <p><strong>Phone:</strong> +8801343136429</p>          <p><strong>Email:</strong> <a class="link" href="mailto:nemo14398@gmail.com">nemo14398@gmail.com</a></p>
+        </div>
+        <div class="col">
+          <p><strong>Website:</strong> <a class="link" href="https://nemocyberworld.github.io" target="_blank">nemocyberworld.github.io</a></p>
+          <p><strong>GitHub:</strong> <a class="link" href="https://github.com/nemocyberworld" target="_blank">github.com/nemocyberworld</a></p>
+          <p><strong>LinkedIn:</strong> <a class="link" href="https://www.linkedin.com/in/saidehossain-856b20363" target="_blank">/in/saidehossain-856b20363</a></p>
+        </div>
+      </div>
     </section>
 
     <section>
       <h2>Professional Summary</h2>
       <p>
-        Offensive Security Researcher and Exploit Developer specializing in vulnerability discovery, exploit creation, and advanced reverse engineering. Experienced in analyzing complex binaries, crafting reliable exploits for Linux and Windows environments, and researching cutting-edge security flaws. Passionate about bridging the gap between vulnerability research and practical offensive security operations, with strong skills in low-level systems, binary analysis, and security automation.
+        Offensive Security researcher focused on <strong>red teaming, vulnerability discovery, and exploit development</strong>.
+        Experienced in reproducing real CVEs, building PoCs (Linux/Windows), and designing <strong>adversary simulations</strong> that demonstrate business impact.
+        Mentor at H4K2LIV3 Academy, creating CTFs and workshops on privilege escalation, web exploitation, and OSINT.
+        Passionate about open-source tooling and methodical threat-informed testing.
       </p>
     </section>
 
     <section>
       <h2>Experience</h2>
-      <p><strong>Freelance Bug Bounty Hunter</strong><br />Ongoing</p>
-      <ul>
-        <li>Reported vulnerabilities through platforms like HackerOne and Bugcrowd</li>
-        <li>Focused on high-impact bugs such as IDOR, SSRF, and logic flaws</li>
-        <li>Utilized recon, automation, and fuzzing tools to uncover security issues</li>
+
+      <p><strong>Cyber Security Trainer / Mentor — H4K2LIV3 Academy</strong><br/><span class="muted">Feb 2025 – Present</span></p>
+      <ul class="bullets-tight">
+        <li>Mentored cohorts in ethical hacking, Linux, and red team tradecraft; authored hands-on labs and CTF challenges.</li>
+        <li>Delivered workshops on <strong>Linux/Windows privilege escalation</strong>, <strong>web app testing</strong>, and <strong>exploit fundamentals</strong>.</li>
+        <li>Built lightweight demo targets and attack paths to mirror real-world kill chains.</li>
       </ul>
 
-      <p><strong>Exploit Developer (Independent Researcher)</strong><br />Ongoing</p>
-      <ul>
-        <li>Created PoCs for stack/heap overflows, ROP chains, shellcode execution</li>
-        <li>Studied real CVEs and recreated exploits on vulnerable environments</li>
-        <li>Worked with Ghidra, IDA, pwntools, GDB, and x64dbg for binary analysis</li>
+      <p><strong>Exploit Developer (Independent Research)</strong><br/><span class="muted">Ongoing</span></p>
+      <ul class="bullets-tight">
+        <li>Developed PoCs for stack/heap overflows, <strong>ROP</strong> chains, shellcode injection; recreated exploits from public CVEs.</li>
+        <li>Tooling: Ghidra, IDA, Binary Ninja, radare2, GDB/WinDbg/x64dbg, pwntools, Frida; targets across ELF/PE.</li>
+        <li>Documented exploitation notes and mitigations (<strong>ASLR, NX/DEP, PIE, canaries, CFG</strong>).</li>
       </ul>
 
-      <p><strong>Mentor — H4K2LIV3 Academy</strong><br />February 2025 – Present</p>
-      <ul>
-        <li>Taught ethical hacking, Linux fundamentals, and red teaming techniques</li>
-        <li>Developed and hosted CTF challenges for hands-on learning</li>
+      <p><strong>Bug Bounty / Pentesting (Freelance)</strong><br/><span class="muted">Ongoing</span></p>
+      <ul class="bullets-tight">
+        <li>Recon-driven testing for IDOR, SSRF, auth/logic flaws; automation for asset discovery and dorking.</li>
+        <li>Reported vulnerabilities on public programs; maintained reproducible writeups & impact narratives.</li>
       </ul>
     </section>
 
     <section>
       <h2>Education</h2>
-      <p><strong>BSc (Hons)</strong> — Major in Physics</p>
+      <ul class="bullets-tight">
+        <li><strong>National University of Bangladesh</strong> — B.Sc. (Hons), Theoretical Physics <span class="muted">(2019–2025)</span></li>
+        <li><strong>University of the People</strong> — B.A.Sc., Computer Science <span class="muted">(Ongoing)</span></li>
+        <li><strong>Harvard (edX)</strong> — CS50x: Intro to Computer Science</li>
+        <li><strong>Saylor Academy</strong> — Computer Science Certificate</li>
+        <li><strong>freeCodeCamp</strong> — Full Stack Development Certification</li>
+      </ul>
     </section>
 
     <section>
       <h2>Skills</h2>
-      <ul>
-        <li><strong>Core Expertise:</strong> Offensive Security Research, Exploit Development, Reverse Engineering, Vulnerability Research</li>
-        <li><strong>Programming Languages:</strong> C, C++, Assembly (x86/x64), Python, Bash, PowerShell</li>
-        <li><strong>Reverse Engineering Tools:</strong> Ghidra, IDA Pro, Binary Ninja, Radare2, GDB, WinDbg, x64dbg, Frida</li>
-        <li><strong>Exploit Techniques:</strong> Stack & Heap Overflows, ROP Chains, Shellcode Injection, Format String, Use-After-Free</li>
-        <li><strong>Security Testing:</strong> Penetration Testing, Bug Hunting, Fuzzing (AFL++, libFuzzer), Crypto Analysis</li>
-        <li><strong>Platforms & OS:</strong> Linux (Kali, BlackArch), Windows</li>
-        <li><strong>Tools:</strong> Metasploit, Burp Suite, Nmap, Wireshark, pwntools, Docker</li>
-        <li><strong>Mitigation Bypass:</strong> ASLR, DEP/NX, Stack Canaries, PIE, CFG/EAF, AV/EDR Evasion</li>
+      <ul class="bullets-tight">
+        <li><strong>Core:</strong> Red Teaming, Offensive Research, Exploit Dev, Reverse Engineering, VAPT, OSINT</li>
+        <li><strong>Techniques:</strong> Stack/Heap Overflows, ROP, Shellcode, Format String, UAF, Token Abuse, Kerberoasting</li>
+        <li><strong>Programming:</strong> C/C++, Python, Bash, x86/x64 Assembly, JavaScript</li>
+        <li><strong>Tools:</strong> Burp, Metasploit, Nmap, Wireshark, pwntools, Ghidra/IDA/BN, radare2, Frida, Docker</li>
+        <li><strong>Platforms:</strong> Linux (Kali, BlackArch), Windows; TCP/IP, DNS, HTTP, AD basics</li>
+        <li><strong>Mitigation Bypass:</strong> ASLR, DEP/NX, Stack Canaries, PIE, CFG/EAF, basic EDR evasion</li>
       </ul>
     </section>
 
     <section>
-      <h2>Hands-on Experience</h2>
-      <ul>
-        <li>TryHackMe — Completed 100+ rooms</li>
-        <li>VulnHub — Rooted boxes like MrRobot, Kioptrix</li>
-        <li>CTF — Active competitor in pwn, reversing, and web challenges</li>
-        <li>Bug Bounty — Disclosed vulnerabilities on major platforms</li>
+      <h2>Selected Open-Source Projects</h2>
+      <ul class="bullets-tight">
+        <li><strong><a class="link" href="https://github.com/nemocyberworld/Offensive-Security-Research-Hub" target="_blank">Offensive Security Research Hub</a>:</strong> Lab notes/code for CVEs, fuzzing, AD attacks, and red team ops.</li>
+        <li><strong><a class="link" href="https://github.com/nemocyberworld/CMP-Dorker" target="_blank">CMP Dorker</a>:</strong> Multi-platform dorking for recon (Google, Shodan, Censys) to uncover exposed assets/data.</li>
+        <li><strong><a class="link" href="https://github.com/nemocyberworld/BugBountyCheckList" target="_blank">Bug Bounty Checklist</a>:</strong> Interactive, category-driven web app to guide systematic web pentests.</li>
+        <li><strong><a class="link" href="https://github.com/nemocyberworld/Nemo-The-Investigator" target="_blank">Nemo The Investigator</a>:</strong> OSINT toolkit for username checks and footprinting.</li>
+        <li><strong><a class="link" href="https://github.com/nemocyberworld/Red-Teaming-Tracker" target="_blank">Red Teaming Tracker</a>:</strong> Lightweight tracker to organize RT engagements and artifacts.</li>
+        <li><strong><a class="link" href="https://github.com/nemocyberworld/mr-linux" target="_blank">Mr Linux</a>:</strong> Gamified Linux learning (commands, quizzes) for red team readiness.</li>
+        <li><strong><a class="link" href="https://github.com/nemocyberworld/assembly-tutor" target="_blank">Assembly Tutor</a></strong> &amp; <strong><a class="link" href="https://github.com/nemocyberworld/learn-rsa-interactively" target="_blank">Learn RSA Interactively</a>:</strong> Low-level & crypto learning tools.</li>
       </ul>
     </section>
 
     <section>
-      <h2>Projects</h2>
-      <ul>
-        <li><strong>Mr Linux:</strong> Linux and bash scripting learning project</li>
-        <li><strong>Assembly Tutor:</strong> Assembly x86(64) learning project</li>
-        <li><strong>Learn RSA Interactively:</strong> RSA encryption and decryption teaching project</li>
+      <h2>Hands-on & CTF</h2>
+      <ul class="bullets-tight">
+        <li>TryHackMe — 100+ rooms completed; <em>pwn/rev/web</em> focus.</li>
+        <li>VulnHub — rooted classics (MrRobot, Kioptrix, etc.).</li>
+        <li>CTF — active competitor; writeups and tooling maintained on GitHub.</li>
       </ul>
     </section>
 
     <section>
       <h2>Certifications</h2>
-      <ul>
-        <li>eJPT (In Progress)</li>
-        <li>OSCP (Target: August 2025)</li>
+      <ul class="bullets-tight">
+        <li>ISO/IEC 27001:2022 Information Security Associate™</li>
+        <li>Open Source Intelligence (OSINT) Certification</li>
+        <li>Debuggers 1012: Introductory GDB</li>
+        <li>Responsive Web Design — freeCodeCamp</li>
+        <li>eJPT — In Progress</li>
+        <li>OSCP — Target Aug 2025</li>
       </ul>
     </section>
 
