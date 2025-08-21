@@ -10,27 +10,15 @@
       background-color: #f4f4f4;
       padding: 20px;
     }
-/*     .container {
+    .container {
       max-width: 900px;
       margin: auto;
       background: #fff;
       padding: 30px;
       border-radius: 10px;
       box-shadow: 0 0 15px rgba(0,0,0,0.1);
-      /* added for pic positioning */
-      position: relative;
-    } */
-    .container {
-      width: 95%;
-      max-width: none;   /* remove the 900px limit */
-      margin: auto;
-      background: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-      position: relative; /* keeps the profile pic positioning */
+      position: relative; /* for profile pic positioning */
     }
-
     h1, h2, h3 {
       color: #222;
       margin-bottom: 5px;
@@ -55,7 +43,7 @@
       margin-bottom: 10px;
     }
 
-    /* === Added photo mechanism (from first HTML) === */
+    /* === Photo mechanism === */
     .profile-pic {
       position: absolute;
       top: 20px;
@@ -70,7 +58,23 @@
     @media (max-width: 600px) {
       .profile-pic { width: 80px; height: 80px; top: 16px; right: 16px; }
     }
+
+    /* === Download-as-PDF button === */
+    .pdf-button {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 9px 14px;
+      background-color: #0073e6;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      cursor: pointer;
+    }
+    .pdf-button:hover { background-color: #005bb5; }
+
     @media print {
+      .pdf-button { display: none; }
       body { background: white; margin: 0; }
       .container { box-shadow: none; margin: 0; padding: 0; }
       .profile-pic {
@@ -80,18 +84,19 @@
       }
       a { color: black; text-decoration: none; }
     }
-    /* === End added photo mechanism === */
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- Added image element -->
+    <!-- Download as PDF -->
+    <button class="pdf-button" onclick="window.print()">Download as PDF</button>
+    <!-- Profile picture -->
     <img src="saide.jpeg" alt="Saide Hossain" class="profile-pic" />
 
     <h1>Saide Hossain</h1>
     <p><strong>Offensive Security Specialist | Penetration Tester | Red Team Enthusiast</strong></p>
     <p class="info-line">
-      Rangpur Division, Bangladesh | +8801343136429 | 
+      Rangpur Division, Bangladesh | +8801343136429 |
       <a href="mailto:saide65438@gmail.com">nemo14398@gmail.com</a>
     </p>
     <p>
